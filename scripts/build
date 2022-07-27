@@ -1,0 +1,8 @@
+#!/bin/bash
+# GET PARENT DIR
+SCRIPT_PATH=`readlink -f "$0"`
+SCRIPT_DIR=`dirname "$SCRIPT_PATH"`
+SCRIPT_PARENT_DIR=`dirname "$SCRIPT_DIR"`
+echo $SCRIPT_PARENT_DIR
+# BUILD
+docker build -t hackbox $SCRIPT_PARENT_DIR

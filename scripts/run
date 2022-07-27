@@ -1,0 +1,7 @@
+#!/bin/bash
+# Stopp all running instances
+docker stop hackbox
+docker rm hackbox
+# Start the container in background and start inside container
+docker run --name hackbox -d hackbox
+docker exec -ti hackbox zsh
